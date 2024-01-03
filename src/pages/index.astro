@@ -1,21 +1,8 @@
 ---
-import "../styles/global.css";
-
-const pageTitle = "Inicio";
+import BaseLayout from "../templates/BaseTemplate.astro";
+const pageTitle = 'Inicio';
 ---
 
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <a href="/">Inicio</a>
-    <a href="/about/">Sobre mi</a>
-    <a href="/blog/">Blog</a>
-    <h1>{pageTitle}</h1>
-  </body>
-</html>
+<BaseLayout pageTitle={pageTitle}>
+  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facilis dignissimos unde obcaecati necessitatibus, veniam et non officia accusantium. Facere quibusdam consequuntur minima aliquam enim voluptatibus possimus quaerat maiores illum.</p>
+</BaseLayout>  
