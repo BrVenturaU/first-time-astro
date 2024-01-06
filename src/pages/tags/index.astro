@@ -1,0 +1,14 @@
+---
+import Tags from "../../components/Tags.astro";
+import BaseTemplate from "../../templates/BaseTemplate.astro";
+
+const pageTitle = "Etiquetas";
+const allPosts = await Astro.glob("../posts/*.md");
+
+const tags = [...new Set(allPosts.flatMap((post) => post.frontmatter.tags))];
+---
+
+<BaseTemplate pageTitle={pageTitle}>
+  <p>Estas son algunas de las etiquetas:</p>
+  <Tags tags={tags} />
+</BaseTemplate>
