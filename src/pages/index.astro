@@ -1,8 +1,15 @@
 ---
+import Greeting from "../components/islands/Greeting.jsx";
 import BaseLayout from "../templates/BaseTemplate.astro";
-const pageTitle = 'Inicio';
+const pageTitle = "Inicio";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facilis dignissimos unde obcaecati necessitatibus, veniam et non officia accusantium. Facere quibusdam consequuntur minima aliquam enim voluptatibus possimus quaerat maiores illum.</p>
-</BaseLayout>  
+  <p>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil facilis
+    dignissimos unde obcaecati necessitatibus, veniam et non officia
+    accusantium. Facere quibusdam consequuntur minima aliquam enim voluptatibus
+    possimus quaerat maiores illum.
+  </p>
+  <Greeting messages={["Hola", "Qué tal", "Hola a todos"]} client:load />
+</BaseLayout>
