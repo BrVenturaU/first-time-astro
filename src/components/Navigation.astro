@@ -1,6 +1,15 @@
-<div class="nav-links" transition:animate="slide">
-  <a href="/">Inicio</a>
-  <a href="/about/" data-astro-reload>Sobre mi</a>
-  <a href="/blog/">Blog</a>
-  <a href="/tags/">Etiquetas</a>
+---
+const linkClasses =
+  "block text-center py2 px-0 no-underline text-lg font-bold uppercase hover:bg-orange-300 focus:bg-orange-300 sm:d-inline sm:inline-block sm:px-4 sm:py-5 dark:text-white";
+---
+
+<div
+  id="navigation"
+  class="z-10 fixed left-0 w-full h-svh bg-orange-300 m-0 scale-y-0 origin-top sm:static sm:size-auto sm:bg-transparent sm:scale-y-100 sm:mx-auto text-center"
+  transition:animate="slide"
+>
+  <a href="/" class={linkClasses}>Inicio</a>
+  <a href="/about/" data-astro-reload class={linkClasses}>Sobre mi</a>
+  <a href="/blog/" class={linkClasses}>Blog</a>
+  <a href="/tags/" class={linkClasses}>Etiquetas</a>
 </div>

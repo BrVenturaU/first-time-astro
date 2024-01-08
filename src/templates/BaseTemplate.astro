@@ -2,12 +2,12 @@
 import { ViewTransitions } from "astro:transitions";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../styles/global.css";
+// import "../styles/global.css";
 
-const {pageTitle} = Astro.props;
+const { pageTitle } = Astro.props;
 ---
 
-<html lang="en">
+<html lang="en" class="bg-slate-50 font-sans">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
@@ -17,16 +17,18 @@ const {pageTitle} = Astro.props;
 
     <ViewTransitions />
   </head>
-  <body>
-    <Header />
-    <h1 transition:animate="slide">{pageTitle}</h1>
+  <body class="dark:bg-blue-950 dark:text-white">
+    <div class="my-0 mx-auto w-full h-svh max-w-[80vh] p-4 leading-normal">
+      <Header />
+      <h1 transition:animate="slide" class="my-4 mx-0 text-4xl font-bold">{pageTitle}</h1>
 
-    <slot />
+      <slot />
 
-    <Footer />
+      <Footer />
+    </div>
 
     <script>
-      import "../scripts/menu.js"
+      import "../scripts/menu.js";
     </script>
   </body>
 </html>
